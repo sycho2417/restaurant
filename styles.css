@@ -1,0 +1,244 @@
+/* Basic Page Styling */
+body {
+    font-family: 'Arial', sans-serif; /* Use a clean, modern font */
+    background-color: #f8f9fa; /* Light background color for contrast */
+    color: #333; /* Default text color */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Full height of the viewport */
+    margin: 0; /* Remove default margin */
+}
+
+header {
+    background-color: #363236;
+    height: 80px;
+    /* Dark background color for the header */
+    padding: 0.5em;
+    /* Reduced padding for a smaller header */
+    display: flex;
+    /* Added display flex for layout */
+    justify-content: space-around;
+    /* Corrected to flex layout */
+    align-items: center;
+    /* Center items vertically */
+    padding: 10px;
+}
+
+header h1 {
+    display: flex;
+    /* Use flexbox for layout */
+    padding-right: 10px;
+    /* Remove default margin to further reduce height */
+    color: #ffffff;
+    /* Set text color to white for visibility */
+}
+
+header button{
+    height: 40px;
+    width: 80px;
+
+    
+}
+
+.btn{
+    width: 50px;
+    height: 40px;
+}
+
+
+main {
+    flex: 1; /* Allow main to expand and take available space */
+}
+
+/* Responsive card layout */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Menu Item Card */
+.menu-item {
+    margin-bottom: 20px; /* Space between cards */
+    display: flex;
+    justify-content: center; /* Center cards horizontally */
+}
+
+.menu-category {
+    margin: 3em 0; /* Margin for spacing between categories */
+    background-color: #ffffff; /* White background for the menu section */
+    padding: 20px; /* Padding inside the menu section */
+    border-radius: 10px; /* Rounded corners for a softer look */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+/* Card styling */
+.card {
+    border: none; /* Remove card borders for a cleaner look */
+    width: 100%; /* Full width within its column */
+    height: 100%; /* Makes sure all cards are the same height */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-bottom: 20px; /* Space between cards */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for transform and shadow */
+}
+.card-body {
+    display: flex;
+    flex-direction: column; /* Aligns items in a column */
+    flex-grow: 1; /* Makes body grow to fill space */
+    justify-content: space-between; /* Distributes space evenly */
+}
+
+.card:hover {
+    transform: scale(1.05); /* Slightly increase the size on hover */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Add shadow on hover */
+}
+
+.card img {
+    width: auto;
+    height: auto;
+    max-height: 150px; /* Max height for the image */
+    border-radius: 10px; /* Rounded corners for images */
+    margin: 10px; /* Add margin for spacing around the image */
+}
+
+.card-img-top {
+    width: 100%; /* Ensure image takes full width */
+    height: 200px; /* Set a fixed height for the image */
+    object-fit: contain; /* Maintain aspect ratio without cropping */
+    border-radius: 10px; /* Ensure rounded corners are consistent */
+}
+
+
+.card-title {
+    font-size: 1rem; /* Font size for card titles */
+}
+
+.card-text {
+    font-size: 0.9rem; /* Font size for card text */
+}
+
+/* Card Footer */
+.card-footer {
+    display: flex; /* Use flexbox for layout */
+    justify-content: space-between; /* Space between elements */
+    align-items: center; /* Center items vertically */
+}
+
+.price {
+    font-weight: bold; /* Make price bold for emphasis */
+    font-size: 1.2em; /* Slightly larger font size for prices */
+}
+
+/* Quantity Selector */
+.quantity-selector {
+    display: flex; /* Use flexbox for the quantity controls */
+    align-items: center; /* Center items vertically */
+}
+
+.quantity-input {
+    width: 40px; /* Set a fixed width for the input */
+    text-align: center; /* Center text in input */
+    margin: 0 5px; /* Add margin for spacing */
+}
+
+/* Button styling */
+.btn {
+    padding: 1px 1px; /* Optional: Adjust padding to make buttons smaller */
+    font-size: 0.875rem; /* Optional: Adjust font size for smaller buttons */
+}
+
+.btn-success {
+    margin-bottom: 10px;
+}
+
+/* Image Popup styles */
+.image-popup {
+    display: none; /* Hidden by default */
+    position: fixed; /* Fixed positioning for the popup */
+    top: 0; /* Align to top */
+    left: 0; /* Align to left */
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+    align-items: flex-start; /* Center content vertically */
+    z-index: 1000; /* High z-index to appear above other elements */
+    color: white;
+    padding: 20px; /* Add padding for better spacing */
+}
+
+.image-popup img {
+    max-width: 100%; /* Limit image width for responsiveness */
+    max-height: 100%; /* Limit image height for responsiveness */
+    display: block; /* Ensure it behaves like a block element */
+    margin: 0 auto; /* Center the QR code horizontally */
+    color: white;
+}
+
+.close-btn {
+    background-color: #dc3545; /* Red close button */
+    color: white; /* White text on close button */
+    border: none; /* No border */
+    padding: 10px; /* Padding inside the button */
+    cursor: pointer; /* Pointer cursor on hover */
+    border-radius: 5px; /* Rounded corners */
+    margin-bottom: 10px; /* Margin below button */
+    transition: background-color 0.3s; /* Transition for button color */
+}
+
+.close-btn:hover {
+    background-color: #c82333; /* Darken button on hover */
+}
+
+footer {
+    background-color: #363236; /* Dark background for the footer */
+    padding: 10px; /* Padding inside footer */
+    color: #ffffff; /* White text color */
+    text-align: center; /* Center text in footer */
+}
+
+
+/* Style for QR code popup */
+#qr-popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    color: white; /* This affects text in the popup */
+}
+
+#qr-popup h3 {
+    color: white; /* This ensures h3 text is white */
+}
+
+#qr-code-content {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+
+
+
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+    .menu-item {
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+}
+
+@media (max-width: 768px) {
+    .menu-item {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+}
